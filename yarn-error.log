@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js publish
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js release
 
 PATH: 
-  C:\cmder\vendor\bin;C:\cmder\vendor\git-for-windows\cmd;C:\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\cmder\vendor\conemu-maximus5;C:\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\nodejs\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\Users\Gaurav\AppData\Local\Microsoft\WindowsApps;C:\Users\Gaurav\AppData\Roaming\npm;C:\Users\Gaurav\AppData\Roaming\Composer\vendor\bin;C:\Users\Gaurav\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gaurav\AppData\Local\GitHubDesktop\bin;C:\Users\Gaurav\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\Gaurav\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\WebStorm 2020.1\bin;C:\Program Files (x86)\GitHub CLI\;C:\Program Files\heroku\bin;C:\cmder\vendor\git-for-windows\mingw64\bin;C:\cmder\vendor\git-for-windows\usr\bin;C:\cmder
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Gaurav\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\nodejs;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Users\Gaurav\AppData\Local\Microsoft\WindowsApps;C:\Users\Gaurav\AppData\Roaming\npm;C:\Users\Gaurav\AppData\Roaming\Composer\vendor\bin;C:\Users\Gaurav\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gaurav\AppData\Local\GitHubDesktop\bin;C:\Users\Gaurav\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\Gaurav\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\WebStorm 2020.1\bin;C:\Program Files (x86)\GitHub CLI;C:\Program Files\heroku\bin
 
 Yarn version: 
   1.22.4
@@ -14,22 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:137008:13)
-      at Interface.emit (events.js:315:20)
-      at Interface._ttyWrite (readline.js:866:16)
-      at ReadStream.onkeypress (readline.js:205:10)
-      at ReadStream.emit (events.js:315:20)
-      at emitKeys (internal/readline/utils.js:335:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1133:36)
-      at ReadStream.emit (events.js:315:20)
-      at addChunk (_stream_readable.js:295:12)
+  SyntaxError: C:\xampp\htdocs\github2\pingo\package.json: Unexpected token } in JSON at position 303
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
     "name": "pingo",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "Love for NodeJS",
     "main": "src/core/main.js",
     "scripts": {
@@ -37,14 +32,14 @@ npm manifest:
       "pack": "electron-builder --dir",
       "dist": "electron-builder",
       "postinstall": "electron-builder install-app-deps",
-      "release": "build"
+      "release": "build",
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/sandeep1995/pingo.git"
+      "url": "git+https://github.com/laddu2003/electron_app_test.git"
     },
-    "author": "Sandeep Acharya",
-    "license": "CC0-1.0",
+    "author": "laddu corp",
+    "license": "MIT",
     "devDependencies": {
       "electron": "^8.2.4",
       "electron-builder": "^22.3.2"
@@ -52,22 +47,33 @@ npm manifest:
     "build": {
       "appId": "com.applyhead.pingo",
       "productName": "Pingo",
-      "copyright": "Copyright © year Sandeep Acharya",
+      "copyright": "Copyright © year laddu corp",
       "mac": {
         "category": "public.app-category.developer-tools",
         "type": "distribution"
       },
+      "win": {
+        "target": [
+          "NSIS"
+        ]
+      },
+      "nsis": {
+        "allowToChangeInstallationDirectory": true,
+        "oneClick": false
+      },
       "publish": [
-        "github"
+        {
+          "provider": "github"
+        }
       ]
     },
     "dependencies": {
       "electron-updater": "^4.0.4"
     },
     "bugs": {
-      "url": "https://github.com/sandeep1995/pingo/issues"
+      "url": "https://github.com/laddu2003/electron_app_test/issues"
     },
-    "homepage": "https://github.com/sandeep1995/pingo#readme",
+    "homepage": "https://github.com/laddu2003/electron_app_test#readme",
     "keywords": []
   }
 

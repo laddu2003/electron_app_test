@@ -1,8 +1,9 @@
 {
   "name": "pingo",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Love for NodeJS",
   "main": "src/core/main.js",
+  "private": "true",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
@@ -14,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/laddu2003/electron_app_test.git"
   },
-  "author": "laddu corp",
+  "author": "laddu corp private",
   "license": "MIT",
   "devDependencies": {
     "electron": "^8.2.4",
@@ -24,10 +25,6 @@
     "appId": "com.applyhead.pingo",
     "productName": "Pingo",
     "copyright": "Copyright © year laddu corp",
-    "mac": {
-      "category": "public.app-category.developer-tools",
-      "type": "distribution"
-    },
     "win": {
       "target": [
         "NSIS"
@@ -38,22 +35,9 @@
       "oneClick": false
     },
     "publish": [
-      "github"
-    ],
-    "files": [
-      "**/*",
-      "!**/*.ts",
-      "!*.code-workspace",
-      "!LICENSE.md",
-      "!package.json",
-      "!package-lock.json",
-      "!e2e/",
-      "!hooks/",
-      "!angular.json",
-      "!_config.yml",
-      "!karma.conf.js",
-      "!tsconfig.json",
-      "!tslint.json"
+      {
+        "provider": "github"
+      }
     ]
   },
   "dependencies": {
