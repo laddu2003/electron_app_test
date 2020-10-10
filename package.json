@@ -14,8 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/sandeep1995/pingo.git"
   },
-  "author": "Sandeep Acharya",
-  "license": "CC0-1.0",
+  "author": "laddu corp",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^8.2.4",
     "electron-builder": "^22.3.2"
@@ -23,13 +23,37 @@
   "build": {
     "appId": "com.applyhead.pingo",
     "productName": "Pingo",
-    "copyright": "Copyright © year Sandeep Acharya",
+    "copyright": "Copyright © year laddu corp",
     "mac": {
       "category": "public.app-category.developer-tools",
       "type": "distribution"
     },
+    "win": {
+      "target": [
+        "NSIS"
+      ]
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    },
     "publish": [
       "github"
+    ],
+    "files": [
+      "**/*",
+      "!**/*.ts",
+      "!*.code-workspace",
+      "!LICENSE.md",
+      "!package.json",
+      "!package-lock.json",
+      "!e2e/",
+      "!hooks/",
+      "!angular.json",
+      "!_config.yml",
+      "!karma.conf.js",
+      "!tsconfig.json",
+      "!tslint.json"
     ]
   },
   "dependencies": {
