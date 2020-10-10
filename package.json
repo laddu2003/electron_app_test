@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandeep1995/pingo.git"
+    "url": "git+https://github.com/laddu2003/electron_app_test.git"
   },
   "author": "laddu corp",
   "license": "MIT",
@@ -60,8 +60,8 @@
     "electron-updater": "^4.0.4"
   },
   "bugs": {
-    "url": "https://github.com/sandeep1995/pingo/issues"
+    "url": "https://github.com/laddu2003/electron_app_test/issues"
   },
-  "homepage": "https://github.com/sandeep1995/pingo#readme",
+  "homepage": "https://github.com/laddu2003/electron_app_test#readme",
   "keywords": []
 }
